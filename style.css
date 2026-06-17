@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#8d8a70;
+    overflow-x:hidden;
+}
+
+body.locked{
+    overflow:hidden;
+    height:100vh;
+}
+
+/* ENVELOPE */
+
+#envelopeSection{
+    height:100vh;
+    width:100%;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+#envelope{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    animation:
+        zoomIntro 3s ease forwards;
+}
+
+
+@keyframes zoomIntro{
+
+    from{
+        opacity:0;
+        transform:scale(1.08);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* INVITATION IMAGES */
+
+.slide{
+    width:100%;
+    min-height:100vh;
+}
+
+.slide img{
+    width:100%;
+    display:block;
+}
+
+/* COUNTDOWN */
+
+.countdown-section{
+
+    min-height:100vh;
+
+    background:#8d8a70;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+.title{
+
+    color:#fff;
+
+    font-size:2.5rem;
+
+    margin-bottom:10px;
+
+    font-family:serif;
+}
+
+.event-date{
+
+    color:#fff;
+
+    margin-bottom:35px;
+
+    opacity:.9;
+}
+
+.countdown{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+
+    max-width:260px;
+
+    margin:auto;
+}
+
+.box{
+
+    width:120px;
+    height:120px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-radius:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.box span{
+
+    color:#fff;
+
+    font-size:2.5rem;
+
+    font-weight:bold;
+}
+
+.box small{
+
+    color:#fff;
+
+    margin-top:6px;
+
+    font-size:.8rem;
+}
